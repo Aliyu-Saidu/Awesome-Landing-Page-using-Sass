@@ -1,0 +1,14 @@
+
+@mixin button($color) {
+ padding: 0.625rem 2rem;
+ background-color: $color;
+ margin: 0 0.5rem;
+	border: 1px solid $primary-color-green;
+ border-radius: 5px;
+	cursor: pointer;
+	transition: all .3s;
+
+ &:hover {
+  transform: scale(1.05);
+ }
+}

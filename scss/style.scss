@@ -1,0 +1,122 @@
+/*
+- What is Sass (Syntactically Awesome StyleSheets)
+- Syntaxes of Sass (SCSS .scss and Sass .sass)
+- Features of Sass
+body
+ font-family: $font-family
+
+*/
+
+@import 'buttons';
+@import 'utilities';
+
+
+body {
+	font-family: $font-family;
+
+}
+
+/* Header Section */
+
+header {
+	height: 100vh;
+	background-color: $primary-color-black;
+	color: $primary-color-green;
+
+ h1 {
+  font-weight: $font-weight-light;
+  line-height: 1.4;
+  margin: 0.625rem 0;
+ }
+ p {
+  margin: 0.625rem 0;
+ }
+}
+
+.navbar {
+	color: $primary-color-green;
+	min-height: 70px;
+	border-bottom: 1px solid darken($primary-color-green, 20%);
+
+ .container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+
+  .logo-container {
+   font-weight: $font-weight-bold;
+   font-size: 2*$font-size;
+  }
+
+ }
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+
+ li {
+  margin: 0.5rem;
+ }
+
+ a {
+  text-decoration: none;
+  display: block;
+  background-color: $primary-color-green;
+  color: $primary-color-black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: all .3s;
+
+  &:hover {
+   background-color: darken($primary-color-green, 10%);
+   transform: scale(0.98);
+  }
+ }
+}
+
+.header-msg {
+	width: 500px;
+	margin: 100px auto;
+	text-align: center;
+
+ h1 {
+  font-size: 4*$font-size;
+ }
+
+ p {
+  color: darken($primary-color-white, 20%);
+  font-size: 1.1 * $font-size;
+
+  span {
+   font-size: 1.5rem;
+  }
+ }
+
+ span {
+  font-weight: 700;
+  color: $primary-color-white;
+ }
+}
+
+.btn-container {
+	display: flex;
+	justify-content: center;
+}
+
+.btn-1 {
+ @include button(transparent);
+ color: $primary-color-green;
+}
+.btn-2 {
+ @include button($primary-color-green);
+}
+
+/* End of Header Section */
